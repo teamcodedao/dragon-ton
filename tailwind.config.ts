@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#FFD900',
-        secondary: '#4EC5F1',
+        secondary: '#FF393A',
       },
       dropShadow: {
         normal: '0 4px 4px rgba(0, 0, 0, 0.25)',

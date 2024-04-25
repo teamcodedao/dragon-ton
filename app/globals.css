@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply bg-secondary;
+  @apply bg-[#4EC5F1];
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .btn {
+    @apply bg-secondary text-primary px-12 py-5 rounded-full border-[3.75px] border-primary inline-block drop-shadow-normal;
   }
 }
