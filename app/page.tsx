@@ -1,3 +1,6 @@
+'use client';
+
+import {useCallback} from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
@@ -8,6 +11,17 @@ import dragon1Img from './dragon-1.png';
 import dragon2Img from './dragon-2.png';
 
 export default function Home() {
+  const headingRef = useCallback<(node: unknown) => void>(node => {
+    if (node instanceof HTMLElement) {
+      (async () => {
+        const {TxtAnime} = await import('txtanime.js');
+        new TxtAnime(node, {
+          effect: 'txt-an-2',
+        });
+      })();
+    }
+  }, []);
+
   return (
     <div className='relative'>
       <Image
@@ -48,14 +62,17 @@ export default function Home() {
               </a>
             </Social>
           </div>
-          <h1 className='text-8xl text-white drop-shadow-normal lg:text-9xl'>
+          <h1
+            ref={headingRef}
+            className='z-10 text-8xl text-white drop-shadow-normal lg:text-9xl'
+          >
             Dragon Ton
           </h1>
           <span className='btn text-4xl max-sm:multi-[`px-6;py-4`] lg:text-5xl'>
             Supply: 100,000,000
           </span>
         </div>
-        <div className={clsx('relative mt-14 sm:mt-10 lg:-mt-10')}>
+        <div className={clsx('relative mt-14 pb-10 sm:mt-10 lg:-mt-10')}>
           <div
             className={clsx(
               'absolute right-1/4 flex flex-col items-center',
