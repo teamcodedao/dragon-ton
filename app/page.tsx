@@ -5,6 +5,7 @@ import Social from './social';
 
 import background from './background.png';
 import dragon1Img from './dragon-1.png';
+import dragon2Img from './dragon-2.png';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         quality={100}
         priority
         alt=''
-        className='min-h-screen w-screen object-cover object-left-bottom'
+        className='min-h-screen w-screen object-cover object-right-bottom'
       />
       <main className='absolute inset-0'>
         <Image
@@ -53,6 +54,32 @@ export default function Home() {
           <span className='btn text-4xl max-sm:multi-[`px-6;py-4`] lg:text-5xl'>
             Supply: 100,000,000
           </span>
+        </div>
+        <div className={clsx('relative mt-14 sm:mt-10 lg:-mt-10')}>
+          <div
+            className={clsx(
+              'absolute right-1/4 flex flex-col items-center',
+              'max-[725px]:multi-[`static`]'
+            )}
+          >
+            <Image
+              src={dragon2Img}
+              quality={100}
+              priority
+              alt=''
+              className='-mb-5 w-[306px]'
+            />
+            <a
+              href={process.env.NEXT_PUBLIC_COIN_URL}
+              target='_buy'
+              className={clsx(
+                'btn px-20 py-0 text-[64px]',
+                'max-[725px]:multi-[`px-14;py-3;text-6xl`]'
+              )}
+            >
+              Buy $Draton
+            </a>
+          </div>
         </div>
       </main>
     </div>

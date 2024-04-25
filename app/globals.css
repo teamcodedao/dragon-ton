@@ -10,8 +10,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
 
+@layer components {
   .btn {
-    @apply bg-secondary text-primary px-12 py-5 rounded-full border-[3.75px] border-primary inline-block drop-shadow-normal;
+    @apply bg-secondary text-primary px-12 py-5 rounded-full border-[3.75px] border-primary inline-block drop-shadow-normal transition;
+
+  a&,button& {
+      @apply hover:multi-[`text-white;bg-primary;border-secondary`];
+    }
   }
 }
