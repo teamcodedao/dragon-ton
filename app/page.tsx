@@ -50,7 +50,7 @@ export default function Home() {
             'max-[725px]:multi-[`ml-0;w-full;mt-40;gap-y-14`]'
           )}
         >
-          <div className='flex gap-x-5'>
+          <div className='z-20 flex gap-x-5'>
             <Social>
               <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target='_twitter'>
                 <img src='/twitter.svg' alt='' />
@@ -69,7 +69,7 @@ export default function Home() {
             Dragon Ton
           </h1>
           <span className='btn text-4xl max-sm:multi-[`px-6;py-4`] lg:text-5xl'>
-            Supply: 100,000,000
+            Supply: 50,000,000
           </span>
         </div>
         <div className={clsx('relative mt-14 pb-10 sm:mt-10 lg:-mt-10')}>
@@ -94,7 +94,7 @@ export default function Home() {
                 'max-[725px]:multi-[`px-14;py-3;text-6xl`]'
               )}
             >
-              Buy $Draton
+              Buy $DRT
             </a>
           </div>
         </div>
